@@ -17,4 +17,8 @@ public interface PetStoreServices {
     @Headers({"accept: application/json"})
     @GET(BASE_URL + PetStoreApi.PET_SUFFIX + PetStoreApi.FIND_BY_STATUS_SUFFIX)
     Call<List<Pet>> findPetByStatus(@Query("status") String status);
+
+    @Headers({"accept: application/json"})
+    @GET(BASE_URL + PetStoreApi.PET_SUFFIX + "{petId}")
+    Call<Pet> findPetByID(@Path("petId") Long petId);
 }

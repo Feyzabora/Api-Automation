@@ -12,4 +12,7 @@ public class PetStoreSteps {
 
     @Given("Find pet and verify by status {}")
     public void findPetByStatus(String status){petStore.findPetByStatus(status.toLowerCase());}
+
+    @Given("Find pet by this id {}")
+    public void getPetID(Long ID){petStore.getPetByID(ID);}
 }
